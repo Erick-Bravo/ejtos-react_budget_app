@@ -12,7 +12,7 @@ const Budget = () => {
 
   const handleBudgetChange = (event) => {
 
-    if (budget < totalExpenses) {
+    if (budget <= totalExpenses) {
       alert("You cannot reduce the budget value lower than the spending");
     } else {
       setNewBudget(event.target.value);
