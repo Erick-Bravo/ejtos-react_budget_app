@@ -41,10 +41,20 @@ const ExpenseItem = (props) => {
       <td>{props.name}</td>
       <td>£{props.cost}</td>
       <td>
-        <button onClick={(event) => increaseAllocation(props.name)}>+</button>
+        <button
+          style={{ border: "none", background: "white" }}
+          onClick={(event) => increaseAllocation(props.name)}
+        >
+          <img src="./plus.jpg" style={{ width: "30px" }} />
+        </button>
       </td>
       <td>
-        <button onClick={(event) => decreaseAllocation(props.name)}>-</button>
+        <button
+          style={{ border: "none", background: "white" }}
+          onClick={(event) => decreaseAllocation(props.name)}
+        >
+          <img src="./negative.png" style={{ width: "30px" }} />
+        </button>
       </td>
       <td>
         <TiDelete size="1.5em" onClick={handleDeleteExpense}></TiDelete>

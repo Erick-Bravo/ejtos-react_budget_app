@@ -4,7 +4,6 @@ import { AppContext } from "../context/AppContext";
 const Budget = () => {
   const { budget, expenses, dispatch } = useContext(AppContext);
   const [newBudget, setNewBudget] = useState(budget);
-  console.log(budget)
 
   const totalExpenses = expenses.reduce((total, item) => {
     return (total = total + item.cost);
