@@ -1,10 +1,17 @@
 import React, { useContext, useState } from "react";
 
 const Currency = () => {
-    const [currency, setCurrency] = useState("£");
-    
+  const [currency, setCurrency] = useState("£");
+
   return (
-    <>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <div style={{ marginLeft: "2rem" }}>
         <label
           style={{
@@ -28,6 +35,7 @@ const Currency = () => {
           background: "#93e49a",
           borderRadius: "0 7px 7px 0",
           width: "125px",
+          height: "37.5px"
         }}
         onChange={(event) => setCurrency(event.target.value)}
       >
@@ -44,11 +52,7 @@ const Currency = () => {
           ₹ Ruppee
         </option>
       </select>
-
-      <div style={{ fontSize: "20px", margin: "0px 10px 0px 30px" }}>
-        {currency}
-      </div>
-    </>
+    </div>
   );
 };
 

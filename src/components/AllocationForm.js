@@ -85,6 +85,7 @@ const AllocationForm = (props) => {
               Reduce
             </option>
           </select>
+          <div style={{ fontSize: "20px", margin: "0px 10px 0px 30px" }}>£</div>
           <input
             required="required"
             type="number"
@@ -93,6 +94,7 @@ const AllocationForm = (props) => {
             style={{ size: 10 }}
             onChange={(event) => setCost(event.target.value)}
           ></input>
+
 
           <button
             className="btn btn-primary"
