@@ -1,7 +1,15 @@
 import React, { useContext, useState } from "react";
+import { AppContext } from "../context/AppContext";
 
 const Currency = () => {
-  const [currency, setCurrency] = useState("£");
+    const {dispatch, currency} = useContext(AppContext);
+  
+  const handleChange = (selection) => {
+    dispatch({
+        type: "CHG_CURRENCY",
+        payload: selection
+    })
+  };
 
   return (
     <div
@@ -16,32 +24,21 @@ const Currency = () => {
       }}
     >
       <div style={{ marginLeft: "2rem" }}>
-        <label
-          style={{
-            background: "#93e49a",
-            color: "White",
-            height: "37.5px",
-            width: "80px",
-            textAlign: "center",
-            paddingTop: "6px",
-            borderRadius: "7px 0 0 7px",
-          }}
-          htmlFor="inputGroupSelect02"
-        >
-          Currency
-        </label>
       </div>
       <select
         style={{
           border: "none",
           color: "white",
           background: "#93e49a",
-          borderRadius: "0 7px 7px 0",
-          width: "125px",
+          borderRadius: "7px",
+          width: "200px",
           height: "37.5px"
         }}
-        onChange={(event) => setCurrency(event.target.value)}
+        onChange={(event) => handleChange(event.target.value)}
       >
+        <option value="" disabled>
+          Currency (£ Pound)
+        </option>
         <option value="$" name="Dollar">
           $ Dollar
         </option>
