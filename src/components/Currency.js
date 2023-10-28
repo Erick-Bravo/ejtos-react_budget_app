@@ -8,8 +8,11 @@ const Currency = () => {
       style={{
         display: "flex",
         flexDirection: "row",
-        justifyContent: "center",
         alignItems: "center",
+        background: "lightgray",
+        width: "100%",
+        height: "73%",
+        borderRadius: "7.5px"
       }}
     >
       <div style={{ marginLeft: "2rem" }}>
